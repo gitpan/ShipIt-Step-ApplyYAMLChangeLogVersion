@@ -1,0 +1,11 @@
+---
+global:
+  name: ShipIt-Step-ApplyYAMLChangeLogVersion
+releases:
+  - author: 'Marcel Gruenauer <marcel@cpan.org>'
+    changes:
+      - original version
+      - documented that this step works well together with Dist::Joseki's 'dist change'-style development
+    date: 2007-11-17T15:20:00Z
+    tags: []
+    version: 0.01
