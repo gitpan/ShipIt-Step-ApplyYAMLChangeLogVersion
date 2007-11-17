@@ -6,7 +6,7 @@ use Dist::Joseki;
 use Dist::Joseki::Version;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 use base qw(ShipIt::Step);
@@ -36,6 +36,8 @@ sub run {
     # call dist(1) so the ~/.distrc gets used
     system("dist version -s -f $self->{file}") and
         die "Can't apply YAML Changelog version: $?\n";
+
+    $state->set_version($version);
 }   
 
 
@@ -77,7 +79,7 @@ please use the C<shipitstepapplyyamlchangelogversion> tag.
 
 =head1 VERSION 
                    
-This document describes version 0.01 of L<ShipIt::Step::ApplyYAMLChangeLogVersion>.
+This document describes version 0.02 of L<ShipIt::Step::ApplyYAMLChangeLogVersion>.
 
 =head1 BUGS AND LIMITATIONS
 
